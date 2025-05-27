@@ -8,7 +8,7 @@
 
 /* Blog Hero Section */
 .blog-hero {
-  padding: 50px 0;
+  padding: 40px 0;
   background-color: var(--light-color);
 }
 
@@ -40,6 +40,32 @@
   height: auto;
   display: block;
 }
+
+.section-main-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 40px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.section-main-title:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: var(--accent-color);
+}
+
+.section-main-title span {
+  color: var(--accent-color);
+}
+
 
 /* Breadcrumb Styles */
 .breadcrumb {
