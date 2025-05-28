@@ -320,7 +320,9 @@
 }
 
 .btn-primary:hover {
-  background-color: var(--accent-light);
+  background-color: transparent;
+  color: var(--accent);
+  border-color: var(--accent);
   transform: translateY(-2px);
   box-shadow: var(--shadow-sm);
 }

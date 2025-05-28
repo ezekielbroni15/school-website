@@ -523,7 +523,7 @@
 
 .btn-close {
   position: absolute;
-  top: 25px;
+  top: 15px;
   right: 25px;
   z-index: 10;
   width: 42px;
@@ -948,5 +948,306 @@
   
   .teaching-image {
     height: 220px;
+  }
+}
+
+
+/* Enhanced Anthem Player Styles */
+.anthem-player-container {
+  background: linear-gradient(135deg, var(--primary-color) 0%, #1a2a3a 100%);
+  height: 100%;
+  color: white;
+}
+
+.anthem-player-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: white;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.anthem-player-title:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: var(--accent-color);
+}
+
+.custom-audio-player {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 30px;
+}
+
+.audio-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.audio-thumbnail {
+  width: 60px;
+  height: 60px;
+  background: rgba(231, 76, 60, 0.2);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  font-size: 1.5rem;
+  color: var(--accent-color);
+}
+
+.audio-details {
+  flex: 1;
+}
+
+.audio-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.audio-composer {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.audio-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.play-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.play-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+}
+
+.progress-container {
+  flex: 1;
+}
+
+.progress-bar {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  margin-bottom: 5px;
+  position: relative;
+  cursor: pointer;
+}
+
+.progress-bar:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  background: var(--accent-color);
+  border-radius: 3px;
+  transition: width 0.1s linear;
+}
+
+.time-display {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.volume-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.volume-btn:hover {
+  opacity: 1;
+}
+
+.volume-slider {
+  width: 80px;
+  height: 4px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.volume-control:hover .volume-slider,
+.volume-slider:focus {
+  opacity: 1;
+}
+
+.download-anthem .btn {
+  border-color: white;
+  color: white;
+  border-radius: 50px;
+  padding: 8px 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.download-anthem .btn:hover {
+  background: white;
+  color: var(--primary-color);
+}
+
+/* Lyrics Styles */
+.lyrics-section {
+  margin-bottom: 25px;
+}
+
+.lyrics-section.chorus {
+  background: rgba(231, 76, 60, 0.05);
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 3px solid var(--accent-color);
+}
+
+.lyrics-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+.lyrics-header i {
+  margin-right: 10px;
+  font-size: 0.9rem;
+}
+
+.lyrics-text {
+  line-height: 1.8;
+  margin-bottom: 0;
+}
+
+/* Boarding Facilities Styles */
+.boarding-card {
+  margin-bottom: 60px;
+}
+
+/* Enquiries Form Styles */
+.enquiries-card {
+  margin-bottom: 60px;
+}
+
+.enquiry-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.enquiry-form .form-control,
+.enquiry-form .form-select {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.enquiry-form .form-control:focus,
+.enquiry-form .form-select:focus {
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+}
+
+/* Modal Styles */
+.modal-content {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.modal-header {
+  background-color: var(--primary-color);
+  color: white;
+  border-bottom: none;
+  padding: 20px 25px;
+}
+
+.modal-title {
+  font-weight: 600;
+}
+
+.modal-body {
+  padding: 25px;
+}
+
+#boardingForm .form-control,
+#boardingForm .form-select {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+}
+
+#boardingForm .form-control:focus,
+#boardingForm .form-select:focus {
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+}
+
+#boardingForm .form-check-input {
+  margin-top: 0.3em;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+  .anthem-audio-container {
+    padding: 30px;
+  }
+  
+  .anthem-lyrics {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .anthem-card .row > div,
+  .enquiries-card .row > div {
+    order: initial !important;
+  }
+  
+  .anthem-card img,
+  .enquiries-card img {
+    border-radius: 0 !important;
+    border-top-left-radius: 12px !important;
+    border-top-right-radius: 12px !important;
+  }
+  
+  .anthem-audio-container {
+    padding: 20px;
   }
 }
