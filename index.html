@@ -635,118 +635,89 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="section contact-section">
+    <section class="section section-light">
       <div class="container">
-        <h2 class="section-title text-white text-center">Drop Us A Line</h2>
-        <div class="row">
-          <div class="col-lg-6 mb-5 mb-lg-0">
-            <div class="contact-form">
-              <h3 class="mb-4">Send Message</h3>
-              <form>
-                <div class="row">
-                  <div class="col-md-6">
+        <div class="section-divider">
+          <h2>Have Questions?</h2>
+        </div>
+
+        <div class="about-card enquiries-card">
+          <div class="row g-0 align-items-center">
+            <div class="col-lg-6 order-lg-2">
+              <div class="card-body p-4 p-lg-5">
+                <div class="school-badge mb-4">
+                  <i class="fas fa-question-circle"></i>
+                  <span>Get in Touch</span>
+                </div>
+                <h3 class="mb-4">Send Us Your Enquiry</h3>
+                <form id="enquiryForm" class="enquiry-form">
+                  <div class="mb-3">
+                    <label for="enquiryName" class="form-label"
+                      >Your Name</label
+                    >
                     <input
                       type="text"
                       class="form-control"
-                      placeholder="Name"
+                      id="enquiryName"
                       required
                     />
                   </div>
-                  <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="enquiryEmail" class="form-label"
+                      >Email Address</label
+                    >
                     <input
                       type="email"
                       class="form-control"
-                      placeholder="Email"
+                      id="enquiryEmail"
                       required
                     />
                   </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-6">
-                    <input
-                      type="tel"
-                      class="form-control"
-                      placeholder="Phone"
-                    />
+                  <div class="mb-3">
+                    <label for="enquiryPhone" class="form-label"
+                      >Phone Number</label
+                    >
+                    <input type="tel" class="form-control" id="enquiryPhone" />
                   </div>
-                  <div class="col-md-6">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Subject"
-                    />
+                  <div class="mb-3">
+                    <label for="enquirySubject" class="form-label"
+                      >Subject</label
+                    >
+                    <select class="form-select" id="enquirySubject" required>
+                      <option value="" selected disabled>
+                        Select a subject
+                      </option>
+                      <option value="Admissions">Admissions</option>
+                      <option value="Academics">Academics</option>
+                      <option value="Boarding">Boarding</option>
+                      <option value="Events">Events</option>
+                      <option value="Other">Other</option>
+                    </select>
                   </div>
-                </div>
-                <textarea
-                  class="form-control"
-                  rows="5"
-                  placeholder="Message"
-                  required
-                ></textarea>
-                <button type="submit" class="btn btn-send mt-3">
-                  Send Message
-                </button>
-              </form>
+                  <div class="mb-3">
+                    <label for="enquiryMessage" class="form-label"
+                      >Your Message</label
+                    >
+                    <textarea
+                      class="form-control"
+                      id="enquiryMessage"
+                      rows="4"
+                      required
+                    ></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary w-100">
+                    Submit Enquiry
+                    <i class="fas fa-paper-plane ms-2"></i>
+                  </button>
+                </form>
+              </div>
             </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="contact-info">
-              <h3 class="text-white mb-4">Contact Information</h3>
-              <div class="contact-item">
-                <div class="contact-icon">
-                  <i class="fas fa-envelope"></i>
-                </div>
-                <div>
-                  <h4>Email</h4>
-                  <p>
-                    <a
-                      href="mailto:admin@pha.edu.gh"
-                      class="text-white text-decoration-none"
-                      >admin@pha.edu.gh</a
-                    >
-                  </p>
-                </div>
-              </div>
-              <div class="contact-item">
-                <div class="contact-icon">
-                  <i class="fas fa-phone"></i>
-                </div>
-                <div>
-                  <h4>Phone</h4>
-                  <p>
-                    <a
-                      href="tel:+233506753235"
-                      class="text-white text-decoration-none"
-                      >+233 50 675 3235</a
-                    ><br />
-                    <a
-                      href="tel:+233543206025"
-                      class="text-white text-decoration-none"
-                      >+233 54 320 6025</a
-                    >
-                  </p>
-                </div>
-              </div>
-              <div class="contact-item">
-                <div class="contact-icon">
-                  <i class="fas fa-map-marker-alt"></i>
-                </div>
-                <div>
-                  <h4>Address</h4>
-                  <p>
-                    <a
-                      href="https://maps.app.goo.gl/7eamoqUVCuYpodAE6"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="text-white text-decoration-none"
-                    >
-                      1 Pinnacle Lane, Oyibi Township<br />Nana One Junction,
-                      Dodowa Road<br />Accra, Ghana
-                    </a>
-                  </p>
-                  <p>Digital Address: GK-0972-7041</p>
-                </div>
-              </div>
+            <div class="col-lg-6 order-lg-1">
+              <img
+                src="./assets/images/enquiries.jpg"
+                alt="Contact Us"
+                class="img-fluid rounded-end"
+              />
             </div>
           </div>
         </div>
