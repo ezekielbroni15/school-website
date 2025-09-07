@@ -214,13 +214,14 @@
             <div class="contact-form">
               <h2 class="section-title">GET IN TOUCH</h2>
               <p class="form-subtitle">We’d love to hear from you</p>
-              <form>
+              <form id="contactForm">
                 <div class="row">
                   <div class="col-md-6 mb-3">
                     <input
                       type="text"
                       class="form-control"
-                      placeholder="Name"
+                      placeholder="Name *"
+                      name="name"
                       required
                     />
                   </div>
@@ -228,7 +229,8 @@
                     <input
                       type="email"
                       class="form-control"
-                      placeholder="Email"
+                      placeholder="Email *"
+                      name="email"
                       required
                     />
                   </div>
@@ -239,13 +241,16 @@
                       type="tel"
                       class="form-control"
                       placeholder="Phone"
+                      name="phone"
                     />
                   </div>
                   <div class="col-md-6 mb-3">
                     <input
                       type="text"
                       class="form-control"
-                      placeholder="Subject"
+                      placeholder="Subject *"
+                      name="subject"
+                      required
                     />
                   </div>
                 </div>
@@ -253,7 +258,8 @@
                   <textarea
                     class="form-control"
                     rows="5"
-                    placeholder="Message"
+                    placeholder="Message *"
+                    name="message"
                     required
                   ></textarea>
                 </div>
@@ -263,10 +269,58 @@
               </form>
             </div>
           </div>
-
         </div>
       </div>
     </section>
+
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body text-center p-5">
+            <i
+              class="fas fa-check-circle text-success mb-4"
+              style="font-size: 3rem"
+            ></i>
+            <h3 class="mb-3">Message Sent Successfully!</h3>
+            <p class="mb-4">
+              Thank you for contacting Pinnacle Heights Academy. We'll get back
+              to you soon.
+            </p>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+            >
+              OK
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Error Modal -->
+    <div class="modal fade" id="errorModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body text-center p-5">
+            <i
+              class="fas fa-exclamation-circle text-danger mb-4"
+              style="font-size: 3rem"
+            ></i>
+            <h3 class="mb-3">Something Went Wrong</h3>
+            <p id="errorMessage" class="mb-4">Please try again later.</p>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+            >
+              OK
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">

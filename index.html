@@ -639,23 +639,25 @@
                 <form id="enquiryForm" class="enquiry-form">
                   <div class="mb-3">
                     <label for="enquiryName" class="form-label"
-                      >Your Name</label
+                      >Your Name *</label
                     >
                     <input
                       type="text"
                       class="form-control"
                       id="enquiryName"
+                      name="name"
                       required
                     />
                   </div>
                   <div class="mb-3">
                     <label for="enquiryEmail" class="form-label"
-                      >Email Address</label
+                      >Email Address *</label
                     >
                     <input
                       type="email"
                       class="form-control"
                       id="enquiryEmail"
+                      name="email"
                       required
                     />
                   </div>
@@ -663,13 +665,23 @@
                     <label for="enquiryPhone" class="form-label"
                       >Phone Number</label
                     >
-                    <input type="tel" class="form-control" id="enquiryPhone" />
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="enquiryPhone"
+                      name="phone"
+                    />
                   </div>
                   <div class="mb-3">
                     <label for="enquirySubject" class="form-label"
-                      >Subject</label
+                      >Subject *</label
                     >
-                    <select class="form-select" id="enquirySubject" required>
+                    <select
+                      class="form-select"
+                      id="enquirySubject"
+                      name="subject"
+                      required
+                    >
                       <option value="" selected disabled>
                         Select a subject
                       </option>
@@ -682,18 +694,18 @@
                   </div>
                   <div class="mb-3">
                     <label for="enquiryMessage" class="form-label"
-                      >Your Message</label
+                      >Your Message *</label
                     >
                     <textarea
                       class="form-control"
                       id="enquiryMessage"
+                      name="message"
                       rows="4"
                       required
                     ></textarea>
                   </div>
                   <button type="submit" class="btn btn-primary w-100">
-                    Submit Enquiry
-                    <i class="fas fa-paper-plane ms-2"></i>
+                    Submit Enquiry <i class="fas fa-paper-plane ms-2"></i>
                   </button>
                 </form>
               </div>
@@ -709,6 +721,55 @@
         </div>
       </div>
     </section>
+
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body text-center p-5">
+            <i
+              class="fas fa-check-circle text-success mb-4"
+              style="font-size: 3rem"
+            ></i>
+            <h3 class="mb-3">Message Sent Successfully!</h3>
+            <p class="mb-4">
+              Thank you for contacting Pinnacle Heights Academy. We'll get back
+              to you soon.
+            </p>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+            >
+              OK
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Error Modal -->
+    <div class="modal fade" id="errorModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body text-center p-5">
+            <i
+              class="fas fa-exclamation-circle text-danger mb-4"
+              style="font-size: 3rem"
+            ></i>
+            <h3 class="mb-3">Something Went Wrong</h3>
+            <p id="errorMessage" class="mb-4">Please try again later.</p>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+            >
+              OK
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">

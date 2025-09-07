@@ -843,6 +843,23 @@ body {
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
 }
 
+/* Form Styles */
+.spinner-border-sm {
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Modal Styles */
+.modal-content {
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
 .school-badge {
   display: inline-flex;
   align-items: center;
